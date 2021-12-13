@@ -1,6 +1,8 @@
 import streamlit as st
 
 import plotly.graph_objects as go
+from raceplotly.plots import barplot
+
 import pandas as pd
 
 
@@ -146,3 +148,25 @@ fig.update_layout(
 
 # Plot!
 st.plotly_chart(fig)
+# ----------------------------------------------------------------------------------------------------------------------------
+
+my_raceplot = barplot(dataset,  item_column='country', value_column='pop', time_column='year')
+my_raceplot.plot(item_label = 'Top Country', value_label = 'pop', frame_duration = 600)
+
+fig1 = my_raceplot.fig
+
+fig1.update_layout(
+    autosize=False,
+    width=900,
+    height=600,
+    margin=dict(
+        l=50,
+        r=50,
+        b=100,
+        t=100,
+        pad=4
+    )
+)
+
+# # Plot!
+st.plotly_chart(fig1)
