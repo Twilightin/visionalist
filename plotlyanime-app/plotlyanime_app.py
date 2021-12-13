@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 import pandas as pd
 
 
-url = "data/gapminder.csv"
+url = "gapminder.csv"
 dataset = pd.read_csv(url)
 
 years = ["1952", "1962", "1967", "1972", "1977", "1982", "1987", "1992", "1997", "2002",
