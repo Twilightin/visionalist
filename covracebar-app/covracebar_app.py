@@ -7,7 +7,7 @@ from raceplotly.plots import barplot
 
 import pandas as pd
 
-cov=pd.read_csv('/covracebar-app/WHOcov_cleaned.csv',index_col=0)
+cov=pd.read_csv('covracebar-app/WHOcov_cleaned.csv',index_col=0)
 
 cov['Date']=pd.to_datetime(cov['Date'])
 
